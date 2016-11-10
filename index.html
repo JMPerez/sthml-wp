@@ -53,17 +53,24 @@
 
 				<section data-background-image="assets/one-job.jpg" data-background-size="90%">
 					<aside class="notes">
-						I'm here to talk about how I have used and misused the picture element and other tools to load images. I also want to show some techniques I've seen on some other sites.
+						<ul>
+							<li>Things that work <strong>and don't</strong></li>
+							<li>Try the <strong>latest library</strong>. Maybe not suitable.</li>
+							<li>Misuse of picture element</li>
 					</aside>
 				</section>
 
 				<section>
 					<h1>Who am I?</h1>
 					<ul>
-						<li class="fragment">A web developer working at Spotify</li>
+						<li class="fragment">A web developer</li>
 					</ul>
 					<aside class="notes">
-						I have been working on web projects that run on Spotify's mobile client, desktop client, and TV, apart from regular sites.
+						<ul>
+							<li><strong>I happen to work at Spotify</strong></li>
+							<li><strong>Real examples</strong> of what issues we have had</li>
+							<li><strong>Real sites</strong> doing fancy stuff</li>
+						</ul>
 					</aside>
 				</section>
 
@@ -75,12 +82,16 @@
 						<ul>
 							<li>Try not to request an image</li>
 							<li>Also one less file to keep around (or many if responsive), and one less source file (eg PSD).</li>
-							<li>Flat design and minimalistic vs border-radius, gradients, etc.</li>
 						</ul>
 					</aside>
 				</section>
 
 				<section data-background-image="assets/minimalist-02.png">
+					<aside class="notes">
+						<ul>
+							<li>Flat design and minimalistic vs border-radius, gradients, etc.</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
@@ -153,20 +164,22 @@
 
 				<section class="optimisation">
 					<h1>Optimising images</h1>
+					<aside class="notes">
+						<ul>
+							<li>Less kilobytes != Improved perceived performance</li>
+							<li>Still, we should carry out image optimisations</li>
+							<li>Fewer bytes = rest of assets load quicker</li>
+							<li>We have <strong>budget</strong> for other things.</li>
+							<li><strong>Structural Similarity</strong></li>
+						</ul>
+					</aside>
 				</section>
 
 				<section class="max">
 					<div class="max-wrapper" style="background-color:#fff">
 						<img src="assets/max/max-original.jpg" style="box-shadow:none">
 					</div>
-					<aside class="notes">
-						<ul>
-							<li>Less kilobytes != Improved perceived performance</li>
-							<li>Still, we should carry out image optimisations</li>
-							<li>Fewer bytes down the wire means the rest of assets will have more bandwith for them. It can also mean that in our budget we can spend more bytes in fancy CSS or a data-binding JS library.</li>
-							<li><strong>Structural Similarity</strong></li>
-						</ul>
-					</aside>
+
 				</section>
 
 				<section class="max">
@@ -298,9 +311,9 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 				<script type="text/template">
 					## How to lazy load: IntersectionObserver FTW
 
-					- Don't bind to the scroll event. Subscribe to an event triggered when the image enters the rendered area
-					- Supported in Chrome, Opera. In development in Firefox and Edge.
-					- Very easy to use as another strategy in your lazy loading library.
+					- Don't bind to the scroll event. Subscribe to an event triggered when the image enters the rendered area<!-- .element: class="fragment" -->
+					- Supported in Chrome, Opera. In development in Firefox and Edge.<!-- .element: class="fragment" -->
+					- Very easy to use as another strategy in your lazy loading library.<!-- .element: class="fragment" -->
 				</script>
 				<aside class="notes">
 					There is an experimental API called IntersectionObserver that suits very well this use case. Instead of binding to the scroll event, and then go through the lazy-loaded images, IntersectionObserver allows us to subscribe to an event triggered when the image enters the rendered area (viewport).
@@ -313,8 +326,6 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 
 				<aside class="notes">
 					IntersectionObserver can also be used to lazy-load other elements on the page. In Spotify we have used it to implement an infinite list React component, so we subscribe to either rows or pages of rows.
-
-					<!-- todo: add image for React component -->
 				</aside>
 			</section>
 
@@ -682,23 +693,28 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 				</section>
 
 				<section>
-					<h1>Triangles!</h1>
-				</section>
-
-				<section>
 					<h1>Should we do this?</h1>
-					<h2>Just because you can it doesn't mean you should</h2>
+					<p>Just because you can it doesn't mean you should</p>
 					<aside class="notes">
-						It might be enough with using progressive JPEGs... or not using anything at all. It's up to you. Whatever you decide to use, it's a good idea if you do it in a way that it can be modified in the future.
+						<ul>
+							<li>It might be enough with using progressive JPEGs...</li>
+							<li>or not using anything at all.</li>
+							<li>Don't couple. Make it revertible.</li>
+						</ul>
 					</aside>
 				</section>
 				<section>
-					<h1>Web is fun</h1>
+					<h1>The Web is <span style="color:rebeccapurple">fun</span>.</h1>
 					<aside class="notes">
-						The great thing about the web and these techniques is that we can all easily inspect and reverse-engineer how sites are doing this. I learned web by viewing the source code of sites, making changes and refreshing.
-
-						Never stop exploring and experimenting.
+						<ul>
+							<li>Open</li>
+							<li>I learned from other sites</li>
+							<li>Never stop exploring and experimenting.</li>
 					</aside>
+				</section>
+				<section data-state="bg-title" data-background-image="assets/backgrounds/pattern-03.svg">
+					<h1 style="color:#333;padding:1em 0">Thanks!</h1>
+					<div class="twitter">@jmperezperez</div>
 				</section>
 				<!-- before looking into image loading techniques -->
 				<!-- <section>

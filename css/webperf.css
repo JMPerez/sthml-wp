@@ -1,17 +1,17 @@
 @font-face{
   font-family:spotify-circular;
-  src:url(/assets/fonts/CircularSpUIT-Light.woff2) format('woff2'),url(/assets/fonts/CircularSpUIT-Light.woff) format('woff'),url(/assets/fonts/CircularSpUIT-Light.ttf) format('ttf');
+  src:url(/assets/fonts/CircularSpUIT-Light.woff2) format('woff2'),url(../assets/fonts/CircularSpUIT-Light.woff) format('woff'),url(../assets/fonts/CircularSpUIT-Light.ttf) format('ttf');
   font-weight:200;
   font-style:normal
 }
 
 @font-face{font-family:spotify-circular;
-    src:url(/assets/fonts/CircularSpUIT-Book.woff2) format('woff2'),url(/assets/fonts/CircularSpUIT-Book.woff) format('woff'),url(/assets/fonts/CircularSpUIT-Book.ttf) format('ttf');
+    src:url(../assets/fonts/CircularSpUIT-Book.woff2) format('woff2'),url(../assets/fonts/CircularSpUIT-Book.woff) format('woff'),url(../assets/fonts/CircularSpUIT-Book.ttf) format('ttf');
     font-weight:400;
     font-style:normal
 }
 @font-face{font-family:spotify-circular;
-      src:url(/assets/fonts/CircularSpUIT-Bold.woff2) format('woff2'),url(/assets/fonts/CircularSpUIT-Bold.woff) format('woff'),url(/assets/fonts/CircularSpUIT-Bold.ttf) format('ttf');
+      src:url(../assets/fonts/CircularSpUIT-Bold.woff2) format('woff2'),url(../assets/fonts/CircularSpUIT-Bold.woff) format('woff'),url(../assets/fonts/CircularSpUIT-Bold.ttf) format('ttf');
       font-weight:600;
       font-style:normal}
 

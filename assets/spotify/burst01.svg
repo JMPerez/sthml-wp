@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="3153px" height="1773px" viewBox="0 0 3153 1773" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#5089D0" offset="0%"></stop>
+            <stop stop-color="#3E6290" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="3152" height="1773"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3152" height="1773" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3152" height="1773" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <linearGradient x1="87.0814543%" y1="19.7251067%" x2="34.42305%" y2="19.7251069%" id="linearGradient-6">
+            <stop stop-color="#29AD85" offset="0%"></stop>
+            <stop stop-color="#441FCC" offset="100%"></stop>
+        </linearGradient>
+        <path d="M2350.15833,1301.28461 L3240.79823,379 L3924.17104,1038.92545 L2324.37281,2695.56501 L2089.01271,2468.2804 L1198.37281,3390.56501 L515,2730.63956 L2114.79823,1074 L2350.15833,1301.28461 Z M994.367413,741.682947 L1648.79823,64 L2332.17104,723.925452 L732.37281,2380.56501 L356.803625,2017.88207 L-297.62719,2695.56501 L-981,2035.63956 L618.798227,379 L994.367413,741.682947 Z M-2059,1657.63956 L-459.201773,1 L224.171037,660.925452 L-1375.62719,2317.56501 L-2059,1657.63956 Z" id="path-7"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="30" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-4" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <g id="Rectangle-2" stroke="#979797" mask="url(#mask-3)" stroke-width="2" fill="url(#linearGradient-1)">
+            <use mask="url(#mask-5)" xlink:href="#path-2"></use>
+        </g>
+        <g id="Combined-Shape" mask="url(#mask-4)">
+            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+            <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+        </g>
+    </g>
+</svg>

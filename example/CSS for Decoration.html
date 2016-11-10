@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)http://razvancaliman.com/css-for-decoration/?utm_source=html5weekly&utm_medium=email#/1 -->
+<html class=" js no-mobile desktop no-ie chrome chrome53 css-for-decoration-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch retina fontface bg-bio domloaded w-1440 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 lt-1680 lt-1920 no-portrait landscape" id="index-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CSS for Decoration</title>
+		<meta name="description" content="Practical use cases for CSS Gradients, multi-background, and CSS Blend Modes">
+		<meta name="author" content="Razvan Caliman">
+
+		<link rel="stylesheet" href="./CSS for Decoration_files/reveal.css">
+		<link rel="stylesheet" href="./CSS for Decoration_files/css-for-decoration.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./CSS for Decoration_files/zenburn.css">
+		<!-- <link rel="stylesheet" href="fonts/fonts.css"> -->
+		<link href="./CSS for Decoration_files/css" rel="stylesheet" type="text/css">
+
+		<!-- Printing and PDF exports -->
+		<!-- <script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script> -->
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@RazvanCaliman">
+		<meta name="twitter:creator" content="@RazvanCaliman">
+		<meta name="twitter:title" content="CSS for Decoration">
+		<meta name="twitter:description" content="Using CSS gradients to create background shapes, skeleton screens, and better borders.">
+		<meta name="twitter:image" content="http://razvancaliman.com/infoshare-2016/screenshot.png"><script type="text/javascript" src="./CSS for Decoration_files/notes.js"></script>
+
+	</head>
+	<body>
+		<div class="reveal fade" role="application" data-transition-speed="default" data-background-transition="fade">
+			<div class="slides" style="width: 1440px; height: 755px;">
+
+				<section data-state="bg-title" hidden="" aria-hidden="true" class="past" style="display: block;">
+					<div class="flex-layout--column">
+						<div class="cell cell--vpack">
+						<h1 class="talk--title">
+							<span class="part1">CSS</span>
+							<span class="part2">for</span>
+							<span class="part3">Decoration</span>
+						</h1>
+						</div>
+					</div>
+				</section>
+
+				<section data-state="bg-bio" class="present" style="display: block;">
+					<div class="flex-layout--row">
+
+						<div class="cell cell--half cell--vpack">
+							<img class="avatar" src="./CSS for Decoration_files/avatar.jpg" alt="">
+						</div>
+
+						<div class="cell cell--half cell--vpack">
+							<h2 class="u-align-left  |  u-twitter">@RazvanCaliman</h2>
+							<ul class="list">
+								<li>CSS Shapes</li>
+								<li>CSS Regions</li>
+								<li>CSS Masking</li>
+								<li>CSS Blend Modes</li>
+								<li>tools &amp; prototypes</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#402060" class="has-dark-background future" hidden="" aria-hidden="true" style="display: block;">
+					<div class="flex-layout--row">
+						<h2 class="u-center">&lt;insert-thing&gt; done with CSS only</h2>
+					</div>
+				</section>
+
+
+				<section data-background-color="#349c87" class="has-dark-background future" hidden="" aria-hidden="true" style="display: block;">
+					<a href="http://stackoverflow.com/questions/30682806/css-is-it-possible-to-achieve-this-without-an-image/30735109" target="_blank">
+						<img src="./CSS for Decoration_files/so-poly1.png" class="screenshot" alt="">
+					</a>
+					<aside class="notes">
+						Polygon background
+						http://stackoverflow.com/questions/30682806/css-is-it-possible-to-achieve-this-without-an-image/30735109#30735109
+					</aside>
+				</section>
+
+				<section data-background-color="#349c87" class="has-dark-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://stackoverflow.com/questions/30682806/css-is-it-possible-to-achieve-this-without-an-image/30735109" target="_blank">
+						<img src="./CSS for Decoration_files/so-poly2.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<section data-background-color="#f7ce31" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://stackoverflow.com/questions/27874354/lemon-shape-css-and-html" target="_blank">
+						<img src="./CSS for Decoration_files/so-lemon1.png" class="screenshot" alt="">
+					</a>
+					<aside class="notes">
+						Demanding lemon
+						http://stackoverflow.com/questions/27874354/lemon-shape-css-and-html
+					</aside>
+				</section>
+
+				<section data-background-color="#f7ce31" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://stackoverflow.com/questions/27874354/lemon-shape-css-and-html" target="_blank">
+						<img src="./CSS for Decoration_files/so-lemon2.png" class="screenshot" alt="">
+					</a>
+					<aside class="notes">
+						Bad code:
+						- needless html
+						- CSS side effects
+						- difficult to maintain
+						- use case for SVG
+					</aside>
+				</section>
+
+				<section data-background-color="black" data-background="resources/meme-jeff-goldblum.jpeg" data-background-size="95%" data-background-image="resources/meme-jeff-goldblum.jpeg" class="has-dark-background future" hidden="" aria-hidden="true" style="display: none;">
+					<aside class="notes">
+						You were so preoccupied with whether or not you could <br>
+						you didn't stop to think if you should.
+					</aside>
+				</section>
+
+				<section data-background-video="video/asinglediv-white.mov" data-background-color="#fff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<cite class="u-bottom-right">
+							<a href="http://a.singlediv.com/" target="_blank">a.singlediv.com</a> by <a href="https://twitter.com/lynnandtonic" target="_blank">Lynn Fisher</a>
+						</cite>
+					</div>
+				</section>
+
+				<section data-state="bg-purple-slant" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--row">
+						<div class="u-center">
+							<h2>CSS features for decoration</h2>
+							<ul class="list list--2col  |  fragment fragment--trigger-highlight  |  u-opacity1" data-fragment-index="0">
+								<li class="highlight">CSS Gradients</li>
+								<li>CSS Filters</li>
+								<li>CSS Blend Modes</li>
+								<li>CSS Masking</li>
+								<li class="highlight">backgrounds</li>
+								<li>box-shadow</li>
+								<li>text-shadow</li>
+								<li>borders</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-background="#08479b" class="has-dark-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--row">
+						<div class="u-center">
+							<h1>Agenda</h1>
+							<ul class="list">
+								<li>Background shapes</li>
+								<li>Skeleton screens</li>
+								<li>Better borders</li>
+								<!-- <li>Range inputs</li> -->
+								<!-- <li>CSS Blend Modes</li> -->
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-state="bg-gradient-intro" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--row">
+						<h1 class="u-center">CSS Gradients</h1>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* CSS linear gradient */
+	.demo {
+		background-image: linear-gradient( 120deg, turquoise 0%, rebeccapurple 100% );
+	}
+						</style>
+						<div class="cell | demo"></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* CSS radial gradient */
+	.demo {
+		background-image: radial-gradient( circle, turquoise 0%, rebeccapurple 100% );
+	}
+						</style>
+						<div class="cell | demo"></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-state="bg-key" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--row">
+						<h2 class="u-top-right u-width-half u-align-right | fragment fragment--trigger-highlight | u-opacity1" data-fragment-index="0">
+							CSS gradients are <span class="highlight">images</span>, not colors.
+						</h2>
+					</div>
+				</section>
+
+				<section data-state="bg-purple-slant" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--row">
+						<div class="u-center">
+							<h2>CSS Background Properties</h2>
+							<ul class="list list--2col list--code | fragment fragment--trigger-highlight | u-opacity1" data-fragment-index="0">
+								<li class="highlight">background-image</li>
+								<li class="highlight">background-size</li>
+								<li>background-clip</li>
+								<li class="highlight">background-position</li>
+								<li class="highlight">background-repeat</li>
+								<li>background-attachment</li>
+								<li class="highlight">background-origin</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Background properties */
+	.demo {
+		background-image: linear-gradient( 120deg, turquoise 50%, rebeccapurple 50% );
+		/*background-size: 50% 50%;*/
+		/*background-repeat: no-repeat;*/
+		/*background-position: center center;*/
+	}
+
+	/* Layers */
+	.demo {
+		/*background-image:
+			linear-gradient( 120deg, turquoise 50%, transparent 50% ),
+			linear-gradient( 120deg, transparent 50%, rebeccapurple 50% );*/
+
+		/*background-size:
+			100% 100%,
+			100% 100%;*/
+
+		/*background-position:
+			center center,
+			center center;*/
+
+		/*background-repeat: no-repeat;*/
+	}
+						</style>
+						<div class="cell | demo" data-layerstack=""></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-state="bg-key" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--row">
+						<h2 class="u-top-right u-width-threequarters u-align-right | fragment fragment--trigger-highlight | u-opacity1" data-fragment-index="0">
+							An element can have <br><span class="highlight">multiple background images</span>, each with its own properties.
+						</h2>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Layers */
+	.demo {
+		background-image:
+			linear-gradient( 120deg, turquoise 50%, transparent 50% ),
+			radial-gradient( closest-side circle, yellow 99%, transparent 0 ),
+			linear-gradient( 120deg, transparent 50%, rebeccapurple 50% );
+
+		background-size:
+			100% 100%,
+			80% 80%,
+			100% 100%;
+
+		background-position:
+			0 0,
+			50% 50%,
+			0 0;
+
+		background-repeat: no-repeat;
+	}
+						</style>
+						<div class="cell | demo" data-layerstack=""></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-background-color="#a22424" class="has-dark-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--row">
+						<h2 class="u-center u-width-threequarters">
+							If all you have is a hammer, <br>everything looks like a nail.
+							<small><br>— Abraham Maslow</small>
+						</h2>
+					</div>
+				</section>
+
+				<section data-background-video="video/behance-white.mov" data-background-color="#fff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<cite class="u-bottom-right">
+							<a href="https://www.behance.net/gallery/35452259/D-D-Play" target="_blank">D-D Play on Behance</a> by 灰 昼
+						</cite>
+					</div>
+				</section>
+
+				<section data-background="#ffffff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://www.fastcompany.com/3059485/test-flying-the-icon-a5-a-revolutionary-new-plane-for-amateur-pilots/2" target="_blank">
+						<img src="./CSS for Decoration_files/fastco1.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* FastCompany header decoration */
+	.demo {
+		background-image:
+			linear-gradient( 185deg, #fee900 60%, transparent 0 ),
+			linear-gradient( white, white );
+	}
+						</style>
+						<div class="cell | demo" data-layerstack=""></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-background="#ffffff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://www.fastcompany.com/" target="_blank">
+						<img src="./CSS for Decoration_files/fastco2.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* FastCompany stripe decoration */
+	.demo {
+		background-image:
+			linear-gradient( 185deg, transparent 20%, #e2e8ec 0, #e2e8ec 80%, transparent 0 ),
+			linear-gradient( white, white );
+
+		background-repeat: no-repeat;
+
+		background-position:
+			0px 0px,
+			0px 0px;
+	}
+						</style>
+						<div class="cell | demo" data-layerstack=""></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-background="#ffffff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://stackoverflow.com/questions/30682806/css-is-it-possible-to-achieve-this-without-an-image/30735109" target="_blank">
+						<img src="./CSS for Decoration_files/so-poly1.png" class="screenshot" alt="">
+					</a>
+				</section>
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Polygon background */
+	.demo {
+		background-image:
+			linear-gradient( 60deg, #227766 25%, transparent 0 ),
+			linear-gradient( 350deg, #40D2B3 20%, transparent 0 ),
+			linear-gradient( 125deg, transparent 70%, #39C1A5 70% ),
+			linear-gradient( 125deg, #2D9D87 45%, transparent 0 ),
+			linear-gradient( 125deg, #35BEA2 70%, transparent 0 );
+	}
+</style>
+						<div class="cell | demo" data-layerstack=""></div>
+						<div class="cell cell--half | editor-container"></div>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Polka dots by Lea Verou */
+	.demo {
+		background-image:
+			radial-gradient( white 15%, transparent 16% ),
+			radial-gradient( white 15%, transparent 16% ),
+			linear-gradient( #c51e1e 0, #c51e1e );
+
+		background-size: 60px 60px;
+
+		background-position:
+			0 0,
+			30px 30px,
+			0 0;
+	}
+</style>
+						<div class="cell | demo" data-layerstack=""></div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-background="#ffffff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://lea.verou.me/css3patterns" target="_blank">
+						<img src="./CSS for Decoration_files/patterns-lea.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<section data-background="#ffffff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<a href="http://bennettfeely.com/gradients" target="_blank">
+						<img src="./CSS for Decoration_files/patterns-bennet.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<!-- <section data-background-video="video/swissincss-white.mov" data-background-color="#fff">
+					<aside class="notes">
+						swissincss.com
+					</aside>
+				</section> -->
+
+				<!-- <section data-background="#08479b">
+					<a href="http://swissincss.com/zurich-tonhalle-1955.html" target="_blank">
+						<img src="screenshots/swissincss3.png" class="screenshot" alt="">
+					</a>
+				</section> -->
+
+				<section data-state="bg-skeleton" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+							<h1 class="u-center">Skeleton Screens</h1>
+					</div>
+					<aside class="notes">
+						https://www.youtube.com/watch?v=Rehw8L5Cl8M
+					</aside>
+				</section>
+
+				<section data-background-color="#ffffff" data-background-image="resources/loading.gif" data-background-size="20%" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<aside class="notes">
+						Progress indicators: too much emphasis on "indicator" instead of "progress"
+					</aside>
+				</section>
+
+				<section data-background-color="#ffffff" data-background-image="resources/skeleton-screens.png" data-background-size="100%" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<cite class="u-bottom-right">Skeleton screen examples by <a href="https://plus.google.com/+LukeWroblewski/posts/UvzW7ZeQxsT" target="_blank">Luke Wroblewski</a></cite>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Skeleton screen */
+	.demo {
+		background-image:
+			radial-gradient( circle 50px at 50px 50px, lightgray 99%, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 );
+
+		background-repeat: repeat-y;
+		/*background-repeat: no-repeat;*/
+
+		background-size:
+			100px 200px, /* circle */
+			150px 200px,
+			350px 200px,
+			300px 200px,
+			250px 200px;
+
+		background-position:
+			0 0, /* circle */
+			120px 0,
+			120px 40px,
+			120px 80px,
+			120px 120px;
+	}
+						</style>
+						<div class="cell | demo-container--skeleton">
+							<div class="demo demo--skeleton"></div>
+						</div>
+						<div class="cell cell--half | editor-container"></div>
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>performance ++</li>
+							<li>No assets download</li>
+							<li>No uneccesary HTML</li>
+							<li>No JS, use :empty selector</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Animated skeleton screen */
+	.demo {
+		background-image:
+			radial-gradient( circle 50px at 50px 50px, lightgray 99%, transparent 0 ),
+			linear-gradient( 100deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 80% ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 ),
+			linear-gradient( lightgray 20px, transparent 0 );
+
+		background-repeat: repeat-y;
+		/*background-repeat: no-repeat;*/
+
+		background-size:
+			100px 200px, /* circle */
+			50px 200px, /* highlight */
+			150px 200px,
+			350px 200px,
+			300px 200px,
+			250px 200px;
+
+		background-position:
+			0 0, /* circle */
+			0 0, /* highlight */
+			120px 0,
+			120px 40px,
+			120px 80px,
+			120px 120px;
+
+		animation: shine 1s infinite;
+	}
+
+	@keyframes shine {
+		to {
+			background-position:
+				0 0,
+				100% 0, /* highlight */
+				120px 0,
+				120px 40px,
+				120px 80px,
+				120px 120px;
+		}
+	}
+						</style>
+						<div class="cell | demo-container--skeleton">
+							<div class="demo demo--skeleton"></div>
+						</div>
+						<div class="cell cell--half | editor-container"></div>
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>performance ++</li>
+							<li>No assets download</li>
+							<li>No uneccesary HTML</li>
+							<li>No JS, use :empty selector</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-background="#ffffff" class="has-light-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<div class="u-center">
+							<h1 class="borders-title">Better borders</h1>
+						</div>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Gradient border */
+	.reveal .demo {
+		border: 30px solid black;
+		/*border: 30px solid transparent;*/
+
+		background-image:
+			linear-gradient( white, white ),
+			linear-gradient( 270deg, #00D7B9 0, #B95DD7 50%, #FFB367 100% );
+
+		background-repeat: no-repeat;
+
+		background-origin:
+			padding-box, /* white bg */
+			border-box;  /* gradient bg */
+
+		background-size:
+			100% 100%, /* white bg */
+			100% 100%; /* gradient bg */
+
+		background-position:
+			0% 0%, /* white bg */
+			0% 0%; /* gradient bg */
+	}
+						</style>
+						<div class="cell | demo-container--border">
+							<div class="demo demo--border" data-layerstack="">Gradient border</div>
+						</div>
+						<div class="cell cell--half | editor-container"></div>
+					</div>
+				</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Gradient border */
+	.reveal .demo {
+		border: 50px solid transparent;
+
+		background-image:
+			linear-gradient( white, white ),
+			url(resources/image-border.jpeg);
+
+		background-repeat: no-repeat;
+
+		background-origin:
+			padding-box,/* white bg */
+			border-box; /* image bg */
+
+		background-size:
+			100% 100%,
+			cover;
+	}
+						</style>
+						<div class="cell | demo-container--border">
+							<div class="demo demo--border" data-layerstack="">Image border</div>
+						</div>
+						<div class="cell cell--third | editor-container"></div>
+					</div>
+				</section>
+
+				<!-- <section data-background="#08479b">
+					<a href="http://www.theverge.com/2016/4/6/11371554/pininfarina-ferrari-fx-first-semi-automatic-transmission" target="_blank">
+						<img src="screenshots/secretsix.png" class="screenshot" alt="">
+					</a>
+				</section> -->
+
+
+				<section hidden="" aria-hidden="true" class="stack future" style="display: none;">
+
+				<section style="display: none;">
+					<!-- Empty slide as reminder of backup content to use only if there's time -->
+				</section>
+
+				<section class="future" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<h1 class="u-center">Range inputs</h1>
+					</div>
+				</section>
+
+				<section class="future" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* Range input decoration */
+	.demo {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		background-image:
+			linear-gradient( 90deg, black 2px, transparent 0 ),
+			linear-gradient( 90deg, red 2px, transparent 0 );
+
+		background-repeat: repeat-x;
+
+		background-size:
+			50px 100%,
+			10px 50%;
+
+		background-position:
+			0 0,
+			0 50%;
+
+		padding: 20px 0;
+		box-sizing: border-box;
+		background-origin: border-box;
+		border-left: 3px solid white;
+		border-right: 3px solid white;
+	}
+						</style>
+						<div class="cell | demo-container--tools">
+							<input type="range" class="demo demo--input" value="0">
+						</div>
+						<div class="cell cell--half | editor-container"></div>
+					</div>
+				</section>
+
+				<section class="future" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<style class="editor-source" media="-x-fake">
+	/* "Wizzard input" inspired by Ana Tudor aka @thebabydino */
+	/* <input type="range" class="demo" min=0 max=2 step=1 value=1 > */
+
+	.demo {
+		-webkit-appearance: none;
+		appearance: none;
+
+		background-image:
+			radial-gradient( circle at 0.5em center, white 0.3125em, skyblue 0.3125em, skyblue 0.5em, transparent 0.5em ),
+			linear-gradient( 90deg, skyblue 0, skyblue);
+
+		background-size:
+			6.25em 1em,
+			6.25em 0.25em;
+
+		background-repeat: repeat-x;
+
+		background-position:
+			0 0, 0 50%;
+
+		font-size: 2em;
+		width: 13.5em;
+		height: 1em;
+	}
+
+	.demo::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+
+		background-image: radial-gradient( circle, red 35%, transparent 0 );
+		width: 1em;
+		height: 1em;
+	}
+
+						</style>
+						<div class="cell | demo-container--tools">
+							<input type="range" class="demo demo--wizzard" value="1" min="0" max="2" step="1">
+						</div>
+						<div class="cell cell--half | editor-container"></div>
+					</div>
+				</section>
+
+				<section data-background="#ffffff" class="future has-light-background" aria-hidden="true" style="display: none;">
+					<a href="https://css-tricks.com/why-do-we-have-repeating-linear-gradient-anyway/" target="_blank">
+						<img src="./CSS for Decoration_files/csstricks-repeating-linear-gradients.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<section data-background="#e97e29" class="future has-light-background" aria-hidden="true" style="display: none;">
+					<a href="http://codepen.io/collection/DgYaMj/" target="_blank">
+						<img src="./CSS for Decoration_files/codepen-sliders.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				</section>
+
+				<section data-background="#ab0e6c" class="has-dark-background future" hidden="" aria-hidden="true" style="display: none;">
+					<div class="flex-layout--column">
+						<div class="u-center">
+							<a href="http://www.amazon.com/CSS-Secrets-Solutions-Everyday-Problems/dp/1449372635" target="_blank">
+								<img src="./CSS for Decoration_files/book-css-secrets.jpg" class="screenshot" alt="">
+							</a>
+							<h2>CSS Secrets by Lea Verou</h2>
+						</div>
+					</div>
+				</section>
+
+				<!-- <section>
+					<div class="flex-layout--column">
+						<h2 class="u-center">CSS Blend Modes</h2>
+					</div>
+				</section>
+
+				<section>
+					split-screen comparison with simple alpha
+				</section>
+
+				<section data-background="#fff">
+					<a href="https://oslego.github.io/cssblending" target="_blank">
+						<img src="screenshots/octoshirt.png" class="screenshot" alt="">
+					</a>
+				</section>
+
+				<section data-background="#fff">
+					<a href="https://una.im/CSSgram/" target="_blank">
+						<img src="screenshots/cssgram.png" class="screenshot" alt="">
+					</a>
+				</section> -->
+
+				<section data-state="bg-title" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--column">
+						<div class="cell cell--vpack">
+						<h1 class="talk--title">
+							<span class="part1">CSS</span>
+							<span class="part2">for</span>
+							<span class="part3">Decoration</span>
+						</h1>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul class="list">
+							<li>CSS has powerful features for decoration</li>
+							<li>They can be complex to use</li>
+							<li>specialized tooling required; DevTools</li>
+							<li>not an excuse to avoid SVG</li>
+						</ul>
+
+					</aside>
+				</section>
+
+				<section data-state="bg-bio" hidden="" aria-hidden="true" class="future" style="display: none;">
+					<div class="flex-layout--row">
+
+						<div class="cell cell--half cell--vpack">
+							<h1>.end { }</h1>
+						</div>
+
+						<div class="cell cell--half cell--vpack">
+							<h2 class="u-align-left  |  u-twitter">@RazvanCaliman</h2>
+							<h4 class="u-align-left"></h4>
+							<h3 class="u-align-left" href="#">
+								<a href="http://razvancaliman.com/css-for-decoration/">razvancaliman.com/css-for-decoration</a>
+							</h3>
+							<br>
+							<h4 class="u-align-left">Credits:</h4>
+							<ul class="list--credits">
+								<li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
+								<li><a href="https://github.com/codemirror/CodeMirror">CodeMirror</a></li>
+								<li><a href="https://github.com/emmetio/codemirror">Emmet for CodeMirror</a></li>
+								<li><a href="https://unsplash.com/@nasa">NASA image</a></li>
+								<li><a href="https://www.google.com/fonts/specimen/Open+Sans">Open Sans font</a></li>
+								<li><a href="https://thenounproject.com/search/?q=key&amp;i=2288">Key by William J. Salvador</a></li>
+								<li><a href="https://thenounproject.com/search/?q=skeleton&amp;i=12410">Skeleton by Sebastian Langer</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		<div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-background-hash="0#402060nullnullnull" data-loaded="true" style="background-color: rgb(64, 32, 96); display: block;"></div><div class="slide-background future" data-background-hash="0#349c87nullnullnull" data-loaded="true" style="background-color: rgb(52, 156, 135); display: block;"></div><div class="slide-background future" data-background-hash="0#349c87nullnullnull" style="background-color: rgb(52, 156, 135); display: none;"></div><div class="slide-background future" data-background-hash="0#f7ce31nullnullnull" style="background-color: rgb(247, 206, 49); display: none;"></div><div class="slide-background future" data-background-hash="0#f7ce31nullnullnull" style="background-color: rgb(247, 206, 49); display: none;"></div><div class="slide-background future" data-background-hash="resources/meme-jeff-goldblum.jpeg95%nullnullnullblacknullnullnull" style="background-size: 95%; background-color: black; display: none;"></div><div class="slide-background future" data-background-hash="0video/asinglediv-white.movnull#fffnullnullnull" style="background-color: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="#08479bnullnullnullnullnullnullnullnull" style="background: rgb(8, 71, 155); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="0#a22424nullnullnull" style="background-color: rgb(162, 36, 36); display: none;"></div><div class="slide-background future" data-background-hash="0video/behance-white.movnull#fffnullnullnull" style="background-color: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="null20%resources/loading.gifnullnull#ffffffnullnullnull" style="background-size: 20%; background-color: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" data-background-hash="null100%resources/skeleton-screens.pngnullnull#ffffffnullnullnull" style="background-size: 100%; background-color: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background stack future" style="display: none;"><div class="slide-background present" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-background-hash="#ffffffnullnullnullnullnullnullnullnull" style="background: rgb(255, 255, 255); display: none;"></div><div class="slide-background future" data-background-hash="#e97e29nullnullnullnullnullnullnullnull" style="background: rgb(233, 126, 41); display: none;"></div></div><div class="slide-background future" data-background-hash="#ab0e6cnullnullnullnullnullnullnullnull" style="background: rgb(171, 14, 108); display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 31.3043px;"></span></div><aside class="controls" style="display: none;"><button class="navigate-left enabled" aria-label="previous slide"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide"></button><button class="navigate-down" aria-label="below slide"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe=""></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+					
+
+						
+							
+						
+
+						
+							@RazvanCaliman
+							
+								CSS Shapes
+								CSS Regions
+								CSS Masking
+								CSS Blend Modes
+								tools &amp; prototypes
+							
+						
+					
+				</div></div>
+
+		<script src="./CSS for Decoration_files/head.min.js"></script>
+		<script src="./CSS for Decoration_files/reveal.js"></script>
+
+		<script src="./CSS for Decoration_files/codemirror.js"></script>
+		<script src="./CSS for Decoration_files/xml.js"></script>
+		<script src="./CSS for Decoration_files/css.js"></script>
+		<script src="./CSS for Decoration_files/htmlmixed.js"></script>
+		<script src="./CSS for Decoration_files/emmet.js"></script>
+
+		<link href="./CSS for Decoration_files/codemirror.css" rel="stylesheet">
+		<link href="./CSS for Decoration_files/dracula.css" rel="stylesheet">
+
+		<script src="./CSS for Decoration_files/layerstack.js"></script>
+		<link href="./CSS for Decoration_files/layerstack.css" rel="stylesheet">
+
+		<script>
+			// Global ref to CodeMirror editor
+			var editor;
+			// Global ref to LayerStack instance
+			var stack;
+			// Keyboard shortcuts for Emmet in CodeMirror instance
+			var emmetKeyOptions = {
+				// 'Cmd-E': 'emmet.expand_abbreviation',
+				// 'Tab': 'emmet.expand_abbreviation_with_tab',
+				'Cmd-D': 'emmet.balance_outward',
+				'Shift-Cmd-D': 'emmet.balance_inward',
+				'Cmd-M': 'emmet.matching_pair',
+				'Shift-Cmd-A': 'emmet.wrap_with_abbreviation',
+				'Ctrl-Alt-Right': 'emmet.next_edit_point',
+				'Ctrl-Alt-Left': 'emmet.prev_edit_point',
+				'Cmd-L': 'emmet.select_line',
+				'Cmd-Shift-M': 'emmet.merge_lines',
+				'Cmd-/': 'emmet.toggle_comment',
+				'Cmd-J': 'emmet.split_join_tag',
+				'Cmd-K': 'emmet.remove_tag',
+				'Shift-Cmd-Y': 'emmet.evaluate_math_expression',
+
+				'Alt-Up': 'emmet.increment_number_by_1',
+				'Alt-Down': 'emmet.decrement_number_by_1',
+				'Shift-Alt-Up': 'emmet.increment_number_by_10',
+				'Shift-Alt-Down': 'emmet.decrement_number_by_10',
+
+				'Shift-Cmd-.': 'emmet.select_next_item',
+				'Shift-Cmd-,': 'emmet.select_previous_item',
+				'Cmd-B': 'emmet.reflect_css_value',
+
+				'Enter': 'emmet.insert_formatted_line_break_only'
+			};
+
+			function toggleEditorsOnSlideChange(event) {
+				var prev = event.previousSlide;
+				var current = event.currentSlide;
+				var editorContainer, sourceElement;
+
+				// Clear editor from previous slide.
+				if (editor && prev) {
+					// Remove DOM and dereference editor instance. CodeMirror cleans-up after itself.
+					prev.querySelector('.CodeMirror').remove();
+					editor = undefined;
+
+					// Disable stylesheet used with code editor
+					prev.querySelector('.editor-source').setAttribute('media', '-x-fake');
+				}
+
+				editorContainer = current.querySelector('.editor-container');
+				sourceElement = current.querySelector('.editor-source');
+
+				// Enable CodeMirror editor for stylesheet source, if any.
+				if (editorContainer && sourceElement) {
+					editor = CodeMirror(editorContainer, {
+						value: sourceElement.textContent,
+						mode: 'css',
+						theme: 'dracula',
+						profile: 'xhtml'
+					});
+
+					// Manually size editor due to bug with Flexbox layout
+					// @see: https://github.com/codemirror/CodeMirror/issues/3679
+					var rect = editorContainer.getBoundingClientRect();
+					editorContainer.querySelector('.CodeMirror').style.height = rect.height + 'px'
+
+					editor.on('change', function(instance, changeObj) {
+						sourceElement.innerHTML = instance.getValue();
+					});
+
+					// Enable stylesheet
+					sourceElement.setAttribute('media', 'screen');
+					// Forces reflow, otherwise styles don't immediately apply.
+					sourceElement.textContent += ' ';
+
+					// Enable Emmet keyboard shortcuts.
+					emmetCodeMirror(editor, emmetKeyOptions);
+				}
+			}
+
+			/*
+				Destroy any existing LayerStack instance on slide change.
+			*/
+			function destroyLayerStackOnSlideChange(event) {
+				if (stack) {
+					stack.destroy({ immediate: true });
+				}
+			}
+
+			/*
+				Toggle LayerStack on and off by listening for clicks on elements that match [data-layerstack].
+				Hide the source element (the one whose background is split into layers) while LayerStack is on.
+			*/
+			function bootstrapLayerStack() {
+				if (!LayerStack) {
+					console.warn('LayerStack library not loaded')
+					return;
+				}
+
+				document.addEventListener('click', function(e) {
+					if (e.target.dataset && e.target.dataset.layerstack !== undefined) {
+						toggleLayerStack(e.target);
+					}
+				});
+
+				function toggleLayerStack(sourceElement) {
+					// Check for existing global ref and destroy if found.
+					if (stack) {
+						stack.destroy();
+						return;
+					}
+
+					stack = new LayerStack(sourceElement);
+					stack.on('afterdestroy', function() {
+						// Invalidate global ref after DOM cleanup
+						stack = undefined;
+						sourceElement.classList.remove('u-opacity0');
+					});
+
+					sourceElement.classList.add('u-opacity0');
+				}
+			}
+
+			Reveal.addEventListener('slidechanged', toggleEditorsOnSlideChange);
+			Reveal.addEventListener('slidechanged', destroyLayerStackOnSlideChange);
+			Reveal.addEventListener('ready', bootstrapLayerStack);
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: false,
+				width: '100%',
+				height: '100%',
+				margin: 0,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+	
+
+</body></html>

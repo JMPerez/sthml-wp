@@ -29,7 +29,7 @@
 				<!-- intro -->
 				<section data-state="bg-title" data-background-image="assets/backgrounds/pattern-01.svg">
 					<h1 style="color:#333;padding:1em 0">Loading images <strong>progressively</strong></h1>
-					<div class="twitter">@jmperezperez</div>
+					<div class="twitter"><a href="https://twitter.com/jmperezperez" style="color:#333">@jmperezperez</a></div>
 				</section>
 
 				<section class="simon-web-performance">
@@ -38,10 +38,13 @@
 				</section>
 
 				<section data-state="simon-mosaic" class="simon-mosaic-container">
-					<img src="assets/simon/simon01.png">
-					<img src="assets/simon/simon02.png" class="fragment">
-					<img src="assets/simon/simon03.png" class="fragment">
-					<img src="assets/simon/simon04.png" class="fragment">
+					<div>
+						<img src="assets/simon/simon01.png">
+						<img src="assets/simon/simon02.png" class="fragment">
+						<img src="assets/simon/simon03.png" class="fragment">
+						<img src="assets/simon/simon04.png" class="fragment">
+						<div style="clear:both"></div>
+					</div>
 					<aside class="notes">
 						<ul>
 							<li>Simon Pieters told us about images, how they represent 2/3 of the bytes of pages, how we could use CSS and SVG to replace them
@@ -87,6 +90,7 @@
 				</section>
 
 				<section data-background-image="assets/minimalist-02.png">
+					<div></div>
 					<aside class="notes">
 						<ul>
 							<li>Flat design and minimalistic vs border-radius, gradients, etc.</li>
@@ -200,7 +204,7 @@
 				</section>
 
 				<section data-background-color="#185B68">
-					<h1>Picture element and srcset</h1>
+					<h2>Picture element and srcset</h2>
 					<svg font-size="6" role="img" viewBox="0 0 115 32" font-family="sans-serif" class="full" aria-label="The
 rotated phone shows a top part of an image of a kettlebell swing; the upright-held tablet shows a
 bit smaller images in two columns; the laptop shows images in three columns.">
@@ -341,7 +345,7 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 
 				<section>
 					<h2>Example</h2>
-					<video data-autoplay src="assets/spotify/video-1-16228.mp4" class="stretch"/>
+					<video data-autoplay src="assets/spotify/video-1-16228.mp4" poster="assets/spotify/video-1-16228-poster.png" class="stretch"/>
 				</section>
 				<section>
 					<img src="assets/spotify/spotify-open-loading.jpg" class="stretch" style="border:0">
@@ -352,7 +356,7 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 
 				<section>
 					<h3>Alternatives</h3>
-					<div class="placeholder-wrapper">
+					<div class="placeholder-wrapper" style="height:300px">
 						<div class="placeholder placeholder-empty fragment">
 							<div class="placeholder-label"></div>
 						</div>
@@ -407,11 +411,11 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 				</section>
 
 				<section>
-					<video data-autoplay src="assets/google-arts-culture.mov" class="stretch"/>
+					<video data-autoplay src="assets/google-arts-culture.mov" poster="assets/google-arts-culture-poster.png" class="stretch"/>
 				</section>
 
 				<section>
-					<video data-autoplay src="assets/google-image-search.mov" class="stretch"/>
+					<video data-autoplay src="assets/google-image-search.mov" poster="assets/google-image-search-poster.png" class="stretch"/>
 				</section>
 
 				<section>
@@ -423,7 +427,7 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 
 				<section>
 					<h2>Medium</h2>
-					<video data-autoplay src="assets/medium-progressive-loading.mp4" class="stretch"/>
+					<video data-autoplay src="assets/medium-progressive-loading.mp4" poster="assets/medium-progressive-loading-poster.png" class="stretch"/>
 					<aside class="notes">
 						- Also known as blur-up technique
 						- Also on some other sites like http://qz.com/
@@ -487,24 +491,43 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 
 				<section>
 					<h3>How do users perceive it?</h3>
-					<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Did <a href="https://twitter.com/Medium">@Medium</a> recently add a new image loading fade-in? I noticed it this morning on mobile and just now again on web. Looks nice.</p>&mdash; Jason (@lang) <a href="https://twitter.com/lang/status/704381934433009664">February 29, 2016</a></blockquote>
-					<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/Medium">@Medium</a>&#39;s articles (although full of high-res images) load up very fast *-*</p>&mdash; DobaKung (@zartre) <a href="https://twitter.com/zartre/status/581646615590502400">March 28, 2015</a></blockquote>
+					<div>
+						<div style="width:45%;float:left;padding:2%">
+							<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Did <a href="https://twitter.com/Medium">@Medium</a> recently add a new image loading fade-in? I noticed it this morning on mobile and just now again on web. Looks nice.</p>&mdash; Jason (@lang) <a href="https://twitter.com/lang/status/704381934433009664">February 29, 2016</a></blockquote>
+						</div>
+						<div style="width:45%;float:left;padding:2%">
+							<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/Medium">@Medium</a>&#39;s articles (although full of high-res images) load up very fast *-*</p>&mdash; DobaKung (@zartre) <a href="https://twitter.com/zartre/status/581646615590502400">March 28, 2015</a></blockquote>
+						</div>
+					</div>
 				</section>
 
 				<section>
 					<h3>or maybe not?</h3>
-					<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I don&#39;t know about you but I don&#39;t like a bit those blurry (still loading...) images on Medium. Very distracting.</p>&mdash; Harris Rodis (@harrisrodis) <a href="https://twitter.com/harrisrodis/status/681877502105628672">December 29, 2015</a></blockquote>
-					<blockquote class="twitter-tweet"><p lang="en" dir="ltr">That blurry image preloading thing on Medium - is it just me or does it make all images load extremely slowly now?</p>&mdash; James Young (@welcomebrand) <a href="https://twitter.com/welcomebrand/status/695545792040472577">February 5, 2016</a></blockquote>
+					<div>
+						<div style="width:45%;float:left;padding:2%">
+							<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I don&#39;t know about you but I don&#39;t like a bit those blurry (still loading...) images on Medium. Very distracting.</p>&mdash; Harris Rodis (@harrisrodis) <a href="https://twitter.com/harrisrodis/status/681877502105628672">December 29, 2015</a></blockquote>
+						</div>
+						<div style="width:45%;float:left;padding:2%">
+							<blockquote class="twitter-tweet"><p lang="en" dir="ltr">That blurry image preloading thing on Medium - is it just me or does it make all images load extremely slowly now?</p>&mdash; James Young (@welcomebrand) <a href="https://twitter.com/welcomebrand/status/695545792040472577">February 5, 2016</a></blockquote>
+						</div>
+            <div style="clear:both"></div>
+					</div>
 					<blockquote class="fragment">
-						<p>When, as with the Progressive JPEG method, image rendition is a two-stage process in which an initially coarse image snaps into sharp focus, <strong>cognitive fluency is inhibited and the brain has to work slightly harder to make sense of what is being displayed</strong>.</p><small>&mdash; From <a href="http://www.webperformancetoday.com/2014/09/17/progressive-image-rendering-good-evil/">Progressive image rendering: Good or evil?</a></small>.
+						<p>When, as with the Progressive JPEG method, image rendition is a two-stage process in which an initially coarse image snaps into sharp focus, <strong>cognitive fluency is inhibited and the brain has to work slightly harder to make sense of what is being displayed</strong>.</p><small>&mdash; From <a href="http://www.webperformancetoday.com/2014/09/17/progressive-image-rendering-good-evil/">Progressive image rendering: Good or evil?</a></small>
 					</blockquote>
 					<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</section>
 
 				<section>
 					<h3>Reliable?</h3>
-					<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m seeing this more and more on Medium posts. Maybe the whole &quot;blur the pictures&quot; stuff isn&#39;t a good idea… <a href="https://t.co/X8wLBDHHFw">pic.twitter.com/X8wLBDHHFw</a></p>&mdash; Damien Erambert (@Eramdam) <a href="https://twitter.com/Eramdam/status/685532496168103936">January 8, 2016</a></blockquote>
-					<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This <a href="https://twitter.com/Medium">@Medium</a> page is fully loaded on my slow connection. Very pretty with those stupid image effects, isn’t it? <a href="https://t.co/kLwlyWRLhc">pic.twitter.com/kLwlyWRLhc</a></p>&mdash; Sara Soueidan (@SaraSoueidan) <a href="https://twitter.com/SaraSoueidan/status/670589926929539072">November 28, 2015</a></blockquote>
+					<div>
+						<div style="width:45%;float:left;padding:2%">
+							<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m seeing this more and more on Medium posts. Maybe the whole &quot;blur the pictures&quot; stuff isn&#39;t a good idea… <a href="https://t.co/X8wLBDHHFw">pic.twitter.com/X8wLBDHHFw</a></p>&mdash; Damien Erambert (@Eramdam) <a href="https://twitter.com/Eramdam/status/685532496168103936">January 8, 2016</a></blockquote>
+						</div>
+						<div style="width:45%;float:left;padding:2%">
+							<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This <a href="https://twitter.com/Medium">@Medium</a> page is fully loaded on my slow connection. Very pretty with those stupid image effects, isn’t it? <a href="https://t.co/kLwlyWRLhc">pic.twitter.com/kLwlyWRLhc</a></p>&mdash; Sara Soueidan (@SaraSoueidan) <a href="https://twitter.com/SaraSoueidan/status/670589926929539072">November 28, 2015</a></blockquote>
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -590,12 +613,12 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 							<div class="fragment">
 							<h4>WebP</h4>
 							<ul class="webp">
-								<li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/01.webp"></div>112 B</li>
-						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/02.webp"></div>154 B</li>
-						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/03.webp"></div>106 B</li>
-						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/04.webp"></div>96 B</li>
-						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/05.webp"></div>116 B</li>
-						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/06.webp"></div>202 B</li>
+								<li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/01.jpg"></div>112 B</li>
+						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/02.jpg"></div>154 B</li>
+						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/03.jpg"></div>106 B</li>
+						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/04.jpg"></div>96 B</li>
+						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/05.jpg"></div>116 B</li>
+						    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/06.jpg"></div>202 B</li>
 							</ul>
 						</div>
 					</main>
@@ -622,12 +645,12 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 							<div>
 								<h4>WebP</h4>
 								<ul class="webp blur">
-									<li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/01.webp"></div>112 B</li>
-							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/02.webp"></div>154 B</li>
-							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/03.webp"></div>106 B</li>
-							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/04.webp"></div>96 B</li>
-							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/05.webp"></div>116 B</li>
-							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp/06.webp"></div>202 B</li>
+									<li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/01.jpg"></div>112 B</li>
+							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/02.jpg"></div>154 B</li>
+							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/03.jpg"></div>106 B</li>
+							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/04.jpg"></div>96 B</li>
+							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/05.jpg"></div>116 B</li>
+							    <li><div class="webp-placeholder"><img src="assets/webp-preview/42-webp-to-jpg/06.jpg"></div>202 B</li>
 								</ul>
 							</div>
 						</main>
@@ -639,14 +662,13 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 				</section>
 
 				<section data-background-color="#03aad6">
-					<!-- todo: add example of xbox / ps4 -->
-					<video data-autoplay src="assets/polygon-ps4.mov" class="stretch"></video>
+					<video data-autoplay src="assets/polygon-ps4.mov" poster="assets/polygon-ps4-poster.png" class="stretch"/>
 					<div><small>Source: <a style="color:#eee" href="http://www.polygon.com/a/ps4-review">polygon.com/a/ps4-review</a></small></div>
 				</section>
 
 				<section>
 					<h3>How it works</h3>
-					<iframe scrolling='no' class="stretch" src='//codepen.io/jmperez/embed/rxxRRg/?height=525&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/jmperez/pen/rxxRRg/'>Drawing SVGs - Spotify Logo</a> by José Manuel Pérez (<a href='http://codepen.io/jmperez'>@jmperez</a>) on <a href='http://codepen.io'>CodePen</a>.
+					<iframe scrolling='no' class="stretch" src='//codepen.io/jmperez/embed/rxxRRg/?height=525&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/jmperez/pen/rxxRRg/'>Drawing SVGs - Spotify Logo</a> by José Manuel Pérez (<a href='http://codepen.io/jmperez'>@jmperez</a>) on <a href='http://codepen.io'>CodePen</a>.
 					</iframe>
 					<aside class="notes">
 						This can be applied directly to SVGs. However, the whole talk is focused on bitmap images, for which we don't have any SVG line unless we vectorize it.
@@ -666,7 +688,9 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 
 				<section>
 					<h3>Drawing bitmap images</h3>
-					<video data-autoplay src="assets/contour.mp4" class="stretch"/>
+					<video autoplay height="509" width="483" class="stretch" poster="assets/contour-poster.png">
+						<source data-src="assets/contour.mp4" type="video/mp4" />
+					</video>
 					<div><small>Source: <a style="color:#eee" href="https://jmperezperez.com/contour/">jmperezperez.com/contour</a></small></div>
 				</section>
 
@@ -715,7 +739,7 @@ bit smaller images in two columns; the laptop shows images in three columns.">
 				</section>
 				<section data-state="bg-title" data-background-image="assets/backgrounds/pattern-03.svg">
 					<h1 style="color:#333;padding:1em 0">Thanks!</h1>
-					<div class="twitter">@jmperezperez</div>
+					<div class="twitter"><a href="https://twitter.com/jmperezperez" style="color:#333">@jmperezperez</a></div>
 				</section>
 				<!-- before looking into image loading techniques -->
 				<!-- <section>
